@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { join } from 'path';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'LOLOLO';
+  getHomePage(): string {
+    const pathToHtml = join(__dirname, '../client', 'index.html');
+    return pathToHtml;
   }
 }
